@@ -17,21 +17,27 @@
 
 ###
 
-<div class="portfolio" align="center" style="display:flex;justify-content:center;align-items:center">
-  <div class="item" style="overflow-y:scroll;width:33%;height:400px;">
+<div class="portfolio" align="center" style="display:inline;">
+  <div class="item" >
     <img src="/assets/Captura de tela 2024-10-14 - 14.48.19.png"/>
   </div>
-  <div class="item" style="overflow-y:scroll;width:33%;height:400px;">
-    <img src="/assets/Captura de tela 2024-10-14 - 14.48.19.png"/>
+  <div class="item">
+    <img width="150" height="400" src="/assets/newline.png"/>
   </div>
-  <div class="item" style="overflow-y:scroll;width:33%;height:400px;">
-    <img src="/assets/Captura de tela 2024-10-14 - 14.48.19.png"/>
+  <div class="item" >
+    <img width="150" height="400" src="/assets/d-influencers.png"/>
   </div>
-  <div class="item" style="overflow-y:scroll;width:33%;height:400px;">
-    <img src="/assets/Captura de tela 2024-10-14 - 14.48.19.png"/>
+  <div class="item" >
+    <img width="150" height="400" src="/assets/flamboia.png"/>
   </div>
-  <div class="item" style="overflow-y:scroll;width:33%;height:400px;">
-    <img src="/assets/Captura de tela 2024-10-14 - 14.48.19.png"/>
+  <div class="item" >
+    <img width="150" height="400" src="/assets/newmillen.png"/>
+  </div>
+  <div class="item" >
+    <img width="150" height="400" src="/assets/artigiana.png"/>
+  </div>
+  <div class="item" >
+    <img width="150" height="400" src="/assets/pedrosocervieri.png"/>
   </div>
 </div>
 
