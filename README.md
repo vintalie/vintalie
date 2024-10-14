@@ -1,3 +1,18 @@
+
+<style>
+
+.portfolio{
+  display:flex;
+  justify-content:center;
+  align-items:center
+}
+.portfolio > .item{
+  overflow-y:scroll;
+  width:33%;
+  height:400px;
+}
+
+</style>
 <h2 align="left">Hi 👋! My name is Mario Luiz and I'm a Web Developer, from São Paulo BR</h2>
 
 
@@ -15,6 +30,24 @@
 <br>If you need a solution for your project, automation for a recurring task, or custom development, get in touch to talk about that!</p>
 
 ###
+
+<div class="portfolio" align="center">
+  <div class="item">
+    <img src="/assets/Captura de tela 2024-10-14 - 14.48.19.png"/>
+  </div>
+  <div class="item">
+    <img src="/assets/Captura de tela 2024-10-14 - 14.48.19.png"/>
+  </div>
+  <div class="item">
+    <img src="/assets/Captura de tela 2024-10-14 - 14.48.19.png"/>
+  </div>
+  <div class="item">
+    <img src="/assets/Captura de tela 2024-10-14 - 14.48.19.png"/>
+  </div>
+  <div class="item">
+    <img src="/assets/Captura de tela 2024-10-14 - 14.48.19.png"/>
+  </div>
+</div>
 
 <div align="left">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/electron/electron-original.svg" height="30" alt="react logo"  />
