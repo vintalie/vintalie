@@ -1,18 +1,4 @@
 
-<style>
-
-.portfolio{
-  display:flex;
-  justify-content:center;
-  align-items:center
-}
-.portfolio > .item{
-  overflow-y:scroll;
-  width:33%;
-  height:400px;
-}
-
-</style>
 <h2 align="left">Hi 👋! My name is Mario Luiz and I'm a Web Developer, from São Paulo BR</h2>
 
 
@@ -31,20 +17,20 @@
 
 ###
 
-<div class="portfolio" align="center">
-  <div class="item">
+<div class="portfolio" align="center" style="display:flex;justify-content:center;align-items:center">
+  <div class="item" style="overflow-y:scroll;width:33%;height:400px;">
     <img src="/assets/Captura de tela 2024-10-14 - 14.48.19.png"/>
   </div>
-  <div class="item">
+  <div class="item" style="overflow-y:scroll;width:33%;height:400px;">
     <img src="/assets/Captura de tela 2024-10-14 - 14.48.19.png"/>
   </div>
-  <div class="item">
+  <div class="item" style="overflow-y:scroll;width:33%;height:400px;">
     <img src="/assets/Captura de tela 2024-10-14 - 14.48.19.png"/>
   </div>
-  <div class="item">
+  <div class="item" style="overflow-y:scroll;width:33%;height:400px;">
     <img src="/assets/Captura de tela 2024-10-14 - 14.48.19.png"/>
   </div>
-  <div class="item">
+  <div class="item" style="overflow-y:scroll;width:33%;height:400px;">
     <img src="/assets/Captura de tela 2024-10-14 - 14.48.19.png"/>
   </div>
 </div>
