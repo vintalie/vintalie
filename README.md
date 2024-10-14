@@ -19,33 +19,9 @@
 
 | | | |
 |:-------------------------:|:-------------------------:|:-------------------------:|
-|<img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="/assets/Captura de tela 2024-10-14 - 14.48.19.png">  Newline |  <img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="/assets/d-influencers.png">|<img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="/assets/.png">|
-|<img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="/assets/flamboia.png">  |  <img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="/assets/newmillen.png">|<img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="/assets/artigiana.png">|
-|<img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="/assets/pedrosocervieri.png">  |  <img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://user-images.githubusercontent.com/297678/29892310-03e92256-8d83-11e7-9b58-986dcb6f702e.png">|<img width="1604" alt="screen shot 2017-08-07 at 12 18 15 pm" src="https://user-images.githubusercontent.com/297678/29892310-03e92256-8d83-11e7-9b58-986dcb6f702e.png">|
-
-<div class="portfolio" align="center" style="display:inline;">
-  <div class="item" >
-    <img src=""/>
-  </div>
-  <div class="item">
-    <img width="150" height="400" src="/assets/newline.png"/>
-  </div>
-  <div class="item" >
-    <img width="150" height="400" src="/assets/d-influencers.png"/>
-  </div>
-  <div class="item" >
-    <img width="150" height="400" src="/assets/flamboia.png"/>
-  </div>
-  <div class="item" >
-    <img width="150" height="400" src="/assets/newmillen.png"/>
-  </div>
-  <div class="item" >
-    <img width="150" height="400" src="/assets/artigiana.png"/>
-  </div>
-  <div class="item" >
-    <img width="150" height="400" src="/assets/pedrosocervieri.png"/>
-  </div>
-</div>
+|<img width="1604" alt="Site desevolvido p/ RBComunicação - Seu Clipe " src="/assets/seuclipe.png">  Seu CLipe |  <img width="1604" alt="Site desevolvido p/ D-Influencers" src="/assets/d-influencers.png">D-Influencers|<img width="1604" alt="Site desevolvido p/ Newline " src="/assets/newline.png">NewLine|
+|<img width="1604" alt="Site desevolvido p/ " src="/assets/flamboia.png">  |  <img width="1604" alt="Site desevolvido p/ " src="/assets/newmillen.png">|<img width="1604" alt="Site desevolvido p/ " src="/assets/artigiana.png">|
+|<img width="1604" alt="Site desevolvido p/ " src="/assets/pedrosocervieri.png">  |  <img width="1604" alt="Site desevolvido p/ " src="https://user-images.githubusercontent.com/297678/29892310-03e92256-8d83-11e7-9b58-986dcb6f702e.png">|<img width="1604" alt="Site desevolvido p/ " src="https://user-images.githubusercontent.com/297678/29892310-03e92256-8d83-11e7-9b58-986dcb6f702e.png">|
 
 <div align="left">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/electron/electron-original.svg" height="30" alt="react logo"  />
