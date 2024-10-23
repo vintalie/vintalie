@@ -1,5 +1,5 @@
 
-<h2 align="left">Hi 👋! My name is Mario Luiz and I'm a Web Developer, from São Paulo BR</h2>
+<h2 align="left">Hi 👋!I'm a Web Developer, from coast of São Paulo BR</h2>
 
 
 ###
@@ -12,7 +12,7 @@
 
 ###
 
-<p>Hi, my name is Mario Luiz and I'm programmer from Brasil, more precisely in the coastal waters of Praia Grande. I have worked with since 2018, some jobs consolidated, but my greatest pride is my personal projects, so check someones!<br>I work with PHP, Javascript, NodeJS, and Python. I know build beutifuls interfaces with HTML, CSS or SCSS, and JS. I also know deploy aplications in Docker, Linux, and Bussiness Hosts with Apache or NGIN.
+<p>Hello, nice to have you here! my name is Mario Luiz and I'm programmer from Brasil, more precisely in the coastal waters of Praia Grande. I have worked with since 2018, some jobs consolidated, but my greatest pride is my personal projects, so check someones!<br>I work with PHP, Javascript, NodeJS, and Python. I know build beutifuls interfaces with HTML, CSS or SCSS, and JS. I also know deploy aplications in Docker, Linux, and Bussiness Hosts with Apache or NGIN.
 <br>If you need a solution for your project, automation for a recurring task, or custom development, get in touch to talk about that!</p>
 
 ###
@@ -21,7 +21,7 @@
 |:-------------------------:|:-------------------------:|:-------------------------:|
 |<img width="1604" alt="Site desevolvido p/ RBComunicação - Seu Clipe " src="/assets/seuclipe.png">  Seu CLipe |  <img width="1604" alt="Site desevolvido p/ D-Influencers" src="/assets/d-influencers.png">D-Influencers|<img width="1604" alt="Site desevolvido p/ Newline " src="/assets/newline.png">NewLine|
 |<img width="1604" alt="Site desevolvido p/ " src="/assets/flamboia.png">  |  <img width="1604" alt="Site desevolvido p/ " src="/assets/newmillen.png">|<img width="1604" alt="Site desevolvido p/ " src="/assets/artigiana.png">|
-|<img width="1604" alt="Site desevolvido p/ " src="/assets/pedrosocervieri.png">  |  <img width="1604" alt="Site desevolvido p/ " src="https://user-images.githubusercontent.com/297678/29892310-03e92256-8d83-11e7-9b58-986dcb6f702e.png">|<img width="1604" alt="Site desevolvido p/ " src="https://user-images.githubusercontent.com/297678/29892310-03e92256-8d83-11e7-9b58-986dcb6f702e.png">|
+|<img width="1604" alt="Site desevolvido p/ " src="/assets/pedrosocervieri.png"> |
 
 <div align="left">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/electron/electron-original.svg" height="30" alt="react logo"  />
