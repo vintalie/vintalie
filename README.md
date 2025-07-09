@@ -20,8 +20,8 @@
 | | | |
 |:-------------------------:|:-------------------------:|:-------------------------:|
 |<img width="1604" alt="Site desevolvido p/ RBComunicação - Seu Clipe " src="https://drive.google.com/thumbnail?id=1cVY3GV4Hds-0OKP-pK5yb_LqnhKf-HTc&sz=w600">  Seu CLipe |  <img width="1604" alt="Site desevolvido p/ D-Influencers" src="https://drive.google.com/thumbnail?id=1Zyaf7G-cTmyXzB-updOqC3dYTH0TBNYN&sz=w600">D-Influencers|<img width="1604" alt="Site desevolvido p/ Newline " src="https://drive.google.com/thumbnail?id=1iVMirtM4I_E33I1JJ0AVlQkXr3bVy9zb&sz=w600">NewLine|
-|<img width="1604" alt="Site desevolvido p/ " src="https://drive.google.com/thumbnail?id=1HKRWcN4C7mX2S6o6-RhiOuhQjYLzd6XP&sz=w600">  |  <img width="1604" alt="Site desevolvido p/ " src="https://drive.google.com/thumbnail?id=&sz=w600">|<img width="1604" alt="Site desevolvido p/ " src="https://drive.google.com/thumbnail?id=&sz=w600">|
-|<img width="1604" alt="Site desevolvido p/ " src="https://drive.google.com/thumbnail?id=&sz=w600"> |
+|<img width="1604" alt="Site desevolvido p/ " src="https://drive.google.com/thumbnail?id=1HKRWcN4C7mX2S6o6-RhiOuhQjYLzd6XP&sz=w600">  |  <img width="1604" alt="Site desevolvido p/ " src="https://drive.google.com/thumbnail?id=1HvjiR2rvbIdULj-tskKHtcC0VKMLo4wm&sz=w600">|<img width="1604" alt="Site desevolvido p/ " src="https://drive.google.com/thumbnail?id=1WI05uGw9zvgSvBJy3-YFP5vMHJ9FnMXd&sz=w600">|
+|<img width="1604" alt="Site desevolvido p/ " src="https://drive.google.com/thumbnail?id=1oOWaz0rnQurXV-mNnNZEhlFrIUHaI_CE&sz=w600"> |
 
 <div align="left">
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/electron/electron-original.svg" height="30" alt="react logo"  />
