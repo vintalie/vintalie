@@ -11,12 +11,13 @@
 </div>
 
 ###
+<div style="display:inline;">
+<img  align="right" src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="100">
+<p style="display:inline; margin-left:30px">Hello, nice to have you here! my name is Mario Luiz and I'm programmer from Brasil,
+<br>If you need a solution for your project, automation for a recurring task, or custom development, get in touch to talk about that!
 
-<p>Hello, nice to have you here! my name is Mario Luiz and I'm programmer from Brasil,
-<br>If you need a solution for your project, automation for a recurring task, or custom development, get in touch to talk about that!</p>
-<p align="center">
-<img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="100">
 </p>
+</div>
 
 ###
 
