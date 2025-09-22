@@ -12,8 +12,11 @@
 
 ###
 
-<p>Hello, nice to have you here! my name is Mario Luiz and I'm programmer from Brasil, more precisely in the coastal waters of Praia Grande. I have worked with since 2018, some jobs consolidated, but my greatest pride is my personal projects, so check someones!<br>I work with PHP, Javascript, NodeJS, and Python. I know build beutifuls interfaces with HTML, CSS or SCSS, and JS. I also know deploy aplications in Docker, Linux, and Bussiness Hosts with Apache or NGIN.
+<p>Hello, nice to have you here! my name is Mario Luiz and I'm programmer from Brasil,
 <br>If you need a solution for your project, automation for a recurring task, or custom development, get in touch to talk about that!</p>
+<p align="center">
+<img src="https://media.giphy.com/media/WUlplcMpOCEmTGBtBW/giphy.gif" width="100">
+</p>
 
 ###
 
