@@ -1,32 +1,236 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link rel="stylesheet" href="assets/style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
-  </head>
-  <body>
-    
-    <main class="container-fluid d-flex align-items-center justify-content-center">
 
-      <div class="container row" style="height:100%">
-        <div class="col-md-6 col-12 d-flex flex-column justify-content-center">
-          <h1 class="main-title">
-            <span>Conectando você</span> </span>ao digital com</span> <span> elegância</span></h1>
-          <a href="http://">
-            <button class="btn btn-primary">Conheça nossos serviços</button>
-          </a>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vintalie — Soluções Digitais</title>
+
+    <link rel="stylesheet" href="style.css"/>
+
+    <!-- 1. VitralCSS via CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/vitracss/dist/VitraCss.min.css" />
+
+    <!-- 2. Font Awesome (ícones) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+    <!-- 3. Estilos customizados -->
+    <style>
+
+    </style>
+</head>
+
+<body>
+
+    <!-- ===== HEADER ===== -->
+    <header class="glass-header">
+        <div class="menu-group">
+            <a href="#servicos" class="menu-item">Serviços</a>
+            <a href="#solucoes" class="menu-item">Produtos</a>
         </div>
-        <div class="col-md-6 col-12 d-flex align-items-end">
-
-          <img class="focus-image" src="./assets/foco-main.png" alt="" width="100%">
+        <div class="logo">V<span>intalie</span></div>
+        <div class="menu-group">
+            <a href="#sobre" class="menu-item">Sobre</a>
+            <a href="#contato" class="menu-item">Contato</a>
+            <button class="btn-glass" onclick="document.getElementById('lead-form').scrollIntoView({behavior:'smooth'})">
+                <i class="fas fa-rocket" style="margin-right:6px;"></i>Fale Conosco
+            </button>
         </div>
-      </div>
-    
-    </main>
+    </header>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js" integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO" crossorigin="anonymous"></script>
-  </body>
-</html>
+    <div class="container">
+
+        <!-- ===== HERO ===== -->
+        <section class="hero">
+            <h1>Ideias que movem marcas.</h1>
+            <p>
+                Transformamos desafios de comunicação em soluções criativas, estratégicas e orientadas a dados.
+                Sua marca merece evoluir.
+            </p>
+            <a href="#lead-form" class="btn-primary">
+                <i class="fas fa-arrow-right" style="margin-right:10px;"></i>Quero transformar minha marca
+            </a>
+        </section>
+
+        <!-- ===== SERVIÇOS (cards) ===== -->
+        <section id="servicos">
+            <h2 class="section-title">Nossas <span>soluções</span></h2>
+            <p class="section-sub">Estratégia, criatividade e tecnologia para impulsionar seu negócio.</p>
+            <div class="cards-grid">
+                <div class="glass-card">
+                    <i class="fas fa-bullseye"></i>
+                    <h3>Estratégia</h3>
+                    <p>Planejamento de marketing, posicionamento e análise de mercado para direcionar suas ações.</p>
+                </div>
+                <div class="glass-card">
+                    <i class="fas fa-paint-brush"></i>
+                    <h3>Branding</h3>
+                    <p>Identidade visual, direção criativa e comunicação que conectam sua marca ao público.</p>
+                </div>
+                <div class="glass-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Performance</h3>
+                    <p>Tráfego pago, geração de leads e funis de conversão com foco em resultados mensuráveis.</p>
+                </div>
+                <div class="glass-card">
+                    <i class="fas fa-code"></i>
+                    <h3>Tecnologia</h3>
+                    <p>Sites, landing pages, automações e ferramentas digitais personalizadas.</p>
+                </div>
+                <div class="glass-card">
+                    <i class="fas fa-database"></i>
+                    <h3>Inteligência de Dados</h3>
+                    <p>Dashboards, analytics e otimização baseada em comportamento para decisões mais assertivas.</p>
+                </div>
+                <div class="glass-card">
+                    <i class="fas fa-pen-fancy"></i>
+                    <h3>Marketing de Conteúdo</h3>
+                    <p>Redes sociais, copywriting, blogs e produção criativa que engajam e convertem.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== DEPOIMENTOS ===== -->
+        <section style="margin-top:4rem;">
+            <h2 class="section-title">O que dizem <span>nossos clientes</span></h2>
+            <p class="section-sub">Histórias reais de marcas que evoluíram com a Vintalie.</p>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p>"A Vintalie transformou nossa presença digital. Em três meses, dobramos nossos leads qualificados."</p>
+                    <div class="author">— Marina S., CEO da Lumus</div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Eles não entregam só marketing, entregam estratégia. Nos ajudaram a reposicionar a marca e os resultados vieram."</p>
+                    <div class="author">— Rafael T., Fundador da TechVibe</div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Profissionalismo, criatividade e dados. A Vintalie é a parceira que toda empresa precisa."</p>
+                    <div class="author">— Carla M., Diretora da EcoLife</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== FORMULÁRIO DE LEADS (LANDING PAGE) ===== -->
+        <section id="lead-form" class="form-section">
+            <h2>Vamos transformar <span style="color:#A98BFF;">sua marca</span>?</h2>
+            <p>Preencha o formulário e nosso time entrará em contato para criar uma solução sob medida.</p>
+            <form class="form-group" action="#" method="POST">
+                <input type="text" name="nome" placeholder="Seu nome completo" required />
+                <input type="email" name="email" placeholder="Seu melhor e-mail" required />
+                <input type="text" name="empresa" placeholder="Nome da sua empresa" />
+                <textarea name="mensagem" placeholder="Conte-nos sobre seu desafio ou objetivo..." rows="4"></textarea>
+                <button type="submit" class="btn-submit">
+                    <i class="fas fa-paper-plane" style="margin-right:10px;"></i>Quero evoluir minha marca
+                </button>
+            </form>
+            <p style="font-size:0.85rem; color:rgba(255,255,255,0.4); margin-top:1rem;">
+                Ao enviar, você concorda com nossa política de privacidade.
+            </p>
+        </section>
+
+        <!-- ===== RODAPÉ ===== -->
+        <footer>
+            <div>
+                &copy; 2026 Vintalie — Soluções Digitais<br />
+                <span style="font-size:0.8rem;">Criatividade · Estratégia · Tecnologia</span>
+            </div>
+            <div class="social">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                <a href="#"><i class="fab fa-youtube"></i></a>
+                <a href="#"><i class="fab fa-x-twitter"></i></a>
+            </div>
+        </footer>
+
+    </div>
+    <!-- ===== RODAPÉ COMPLETO ===== -->
+    <footer class="footer-glass">
+        <div class="footer-grid">
+
+            <!-- Coluna 1: Marca -->
+            <div class="footer-col brand-col">
+                <div class="footer-logo">V<span>intalie</span></div>
+                <p class="footer-tagline">Ideias que movem marcas.</p>
+                <p class="footer-desc">
+                    Transformamos desafios de comunicação em soluções criativas, 
+                    estratégicas e orientadas a dados.
+                </p>
+                <div class="footer-social">
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#"><i class="fab fa-youtube"></i></a>
+                    <a href="#"><i class="fab fa-x-twitter"></i></a>
+                </div>
+            </div>
+
+            <!-- Coluna 2: Links Rápidos -->
+            <div class="footer-col">
+                <h4>Navegação</h4>
+                <ul class="footer-links">
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#solucoes">Produtos</a></li>
+                    <li><a href="#sobre">Sobre Nós</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#lead-form">Trabalhe Conosco</a></li>
+                </ul>
+            </div>
+
+            <!-- Coluna 3: Soluções -->
+            <div class="footer-col">
+                <h4>Nossas Soluções</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Estratégia Digital</a></li>
+                    <li><a href="#">Branding & Identidade</a></li>
+                    <li><a href="#">Marketing de Performance</a></li>
+                    <li><a href="#">Tecnologia & Automação</a></li>
+                    <li><a href="#">Inteligência de Dados</a></li>
+                </ul>
+            </div>
+
+            <!-- Coluna 4: Contato e Localização -->
+            <div class="footer-col">
+                <h4>Fale com a gente</h4>
+                <ul class="footer-contact">
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <a href="mailto:contato@vintalie.com">contato@vintalie.com</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone-alt"></i>
+                        <a href="tel:+5511999999999">+55 (11) 99999-9999</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>São Paulo, SP — Brasil</span>
+                    </li>
+                </ul>
+                <!-- Micro CTA para o formulário -->
+                <a href="#lead-form" class="footer-cta">
+                    <i class="fas fa-paper-plane"></i> Vamos evoluir sua marca?
+                </a>
+            </div>
+
+        </div>
+
+        <!-- Barra inferior -->
+        <div class="footer-bottom">
+            <p>&copy; 2026 Vintalie — Soluções Digitais. Todos os direitos reservados.</p>
+            <div class="footer-legal">
+                <a href="#">Política de Privacidade</a>
+                <span>|</span>
+                <a href="#">Termos de Uso</a>
+            </div>
+        </div>
+    </footer>
+    <!-- Script para animações (VitralCSS já possui, mas podemos adicionar um smooth scroll) -->
+    <script>
+        // Scroll suave para os links do menu
+        document.querySelectorAll('.menu-item[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                const href = this.getAttribute('href');
+                if (href !== '#') {
+                    e.preventDefault();
+                    document.querySelector(href).scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+
