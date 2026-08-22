@@ -1,0 +1,13 @@
+<section style="margin-top:4rem;">
+  <h2 class="section-title">O que dizem <span>nossos clientes</span></h2>
+  <p class="section-sub">Histórias reais de marcas que evoluíram com a Vintalie.</p>
+  <div class="testimonial-grid">
+    {% assign testimonials = site.testimonials | sample: 3 %}
+    {% for depoimento in testimonials %}
+      <div class="testimonial-card">
+        <p>"{{ depoimento.content }}"</p>
+        <div class="author">— {{ depoimento.author }}, {{ depoimento.cargo }} da {{ depoimento.empresa }}</div>
+      </div>
+    {% endfor %}
+  </div>
+</section>

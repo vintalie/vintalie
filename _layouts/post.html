@@ -1,0 +1,10 @@
+---
+layout: default
+---
+<article class="post-full">
+  <h1>{{ page.title }}</h1>
+  <p class="post-meta">{{ page.date | date: "%d/%m/%Y" }} • {{ page.categories | join: ", " }}</p>
+  <div class="post-content">
+    {{ content }}
+  </div>
+</article>

@@ -1,0 +1,56 @@
+---
+layout: default
+---
+
+<div class="blog-archive">
+  <h1 class="section-title">Blog <span>Vintalie</span></h1>
+  <p class="section-sub">Artigos sobre marketing, tecnologia, dados e estratégia.</p>
+
+  <!-- Menu de categorias -->
+  <div class="category-menu" style="display:flex; flex-wrap:wrap; gap:0.8rem; justify-content:center; margin-bottom:2rem;">
+    <a href="{{ '/blog/' | relative_url }}" class="btn-glass" style="background:rgba(169,139,255,0.15);">Todos</a>
+    {% assign categories = site.posts | map: "categories" | uniq | sort %}
+    {% for cat in categories %}
+      {% if cat != "" %}
+        {% assign slug = cat | slugify %}
+        <a href="{{ '/blog/categoria/' | append: slug | relative_url }}" class="btn-glass">{{ cat | capitalize }}</a>
+      {% endif %}
+    {% endfor %}
+  </div>
+
+  <div class="cards-grid">
+    {% for post in paginator.posts %}
+      <article class="glass-card">
+        <h3><a href="{{ post.url | relative_url }}" style="color:inherit;text-decoration:none;">{{ post.title }}</a></h3>
+        <p>{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
+        <div style="display:flex; justify-content:space-between; align-items:center; margin-top:0.8rem;">
+          <small>{{ post.date | date: "%d/%m/%Y" }}</small>
+          <span style="color:#A98BFF; font-size:0.85rem;">
+            {% for category in post.categories %}
+              <a href="{{ '/blog/categoria/' | append: category | slugify | relative_url }}" style="color:#A98BFF;">#{{ category }}</a>{% unless forloop.last %}, {% endunless %}
+            {% endfor %}
+          </span>
+        </div>
+      </article>
+    {% endfor %}
+  </div>
+
+  <!-- Paginação -->
+  {% if paginator.total_pages > 1 %}
+  <div class="pagination" style="display:flex; justify-content:center; gap:0.5rem; margin-top:2rem; flex-wrap:wrap;">
+    {% if paginator.previous_page %}
+      <a href="{{ paginator.previous_page_path }}" class="btn-glass">&laquo; Anterior</a>
+    {% endif %}
+    {% for page in (1..paginator.total_pages) %}
+      {% if page == paginator.page %}
+        <span class="btn-glass" style="background:rgba(169,139,255,0.2); border-color:#A98BFF;">{{ page }}</span>
+      {% else %}
+        <a href="{{ paginator.paginate_path | replace: ':num', page }}" class="btn-glass">{{ page }}</a>
+      {% endif %}
+    {% endfor %}
+    {% if paginator.next_page %}
+      <a href="{{ paginator.next_page_path }}" class="btn-glass">Próximo &raquo;</a>
+    {% endif %}
+  </div>
+  {% endif %}
+</div>

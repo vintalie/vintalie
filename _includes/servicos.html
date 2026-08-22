@@ -1,0 +1,13 @@
+<section id="servicos">
+  <h2 class="section-title">Nossas <span>soluções</span></h2>
+  <p class="section-sub">Estratégia, criatividade e tecnologia para impulsionar seu negócio.</p>
+  <div class="cards-grid">
+    {% for servico in site.data.servicos %}
+      <div class="glass-card">
+        <i class="fas {{ servico.icone }}"></i>
+        <h3>{{ servico.titulo }}</h3>
+        <p>{{ servico.descricao }}</p>
+      </div>
+    {% endfor %}
+  </div>
+</section>
