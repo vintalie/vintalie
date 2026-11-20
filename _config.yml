@@ -3,37 +3,50 @@ description: Ideias que movem marcas.
 baseurl: ""
 url: "https://vintalie.com.br"
 
+# ============================================================================
+# Coleções
+#   • testimonials : depoimentos de clientes
+#   • servicos     : artigos de serviço (mesma lógica do blog: categorias + paginação)
+# ============================================================================
 collections:
   testimonials:
     output: true
     permalink: /depoimentos/:path/
+  servicos:
+    output: true
+    permalink: /servicos/:title/
 
+# Posts do blog (com paginação)
 permalink: /blog/:year/:month/:day/:title/
 
 defaults:
+  # Posts do blog
   - scope:
       path: ""
       type: "posts"
     values:
       layout: "post"
+      section: "blog"
+  # Artigos de serviço
+  - scope:
+      path: ""
+      type: "servicos"
+    values:
+      layout: "servico"
+      section: "servicos"
+  # Depoimentos
   - scope:
       path: ""
       type: "testimonials"
     values:
       layout: "testimonial"
+  # Demais páginas
   - scope:
       path: ""
     values:
       layout: "default"
 
-# Defaults para páginas de categoria
-defaults:
-  - scope:
-      path: "categories/*.md"
-    values:
-      layout: "category"
-
-# Configurações de paginação
+# Configurações de paginação (blog)
 pagination:
   enabled: true
   per_page: 5
@@ -42,5 +55,6 @@ pagination:
   limit: 0
   sort_field: 'date'
   sort_reverse: true
+
 plugins:
   - jekyll-paginate-v2

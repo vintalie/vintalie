@@ -1,14 +1,48 @@
+<!--
+  Header — fundo branco.
+  Layout:
+    [ Logo ] [ itens do menu ]  ..........  [ Fale Conosco ]
+  • Logo à esquerda, itens ao lado da logo.
+  • Botão "Fale Conosco" à direita, com formulário de segmentação (#contato).
+  Responsivo (<=900px): logo à esquerda + botão hambúrguer; painel mobile abaixo.
+-->
 <header class="glass-header">
-  <div class="menu-group">
-    <a href="#servicos" class="menu-item">Serviços</a>
-    <a href="/blog/" class="menu-item">Blog</a>
-  </div>
-  <div class="logo">V<span>intalie</span></div>
-  <div class="menu-group">
-    <a href="#sobre" class="menu-item">Sobre</a>
-    <a href="#contato" class="menu-item">Contato</a>
-    <button class="btn-glass" onclick="document.getElementById('lead-form').scrollIntoView({behavior:'smooth'})">
+
+  <!-- Logo à esquerda. No desktop usa a horizontal; no mobile (<=900px) usa o símbolo V. -->
+  <a href="{{ '/' | relative_url }}" class="logo" aria-label="Vintalie — início">
+    <picture>
+      <source media="(max-width: 900px)" srcset="{{ '/assets/img/icon-v.svg' | relative_url }}" />
+      <img src="{{ '/assets/img/logo-horizontal.svg' | relative_url }}" alt="Vintalie" />
+    </picture>
+  </a>
+
+  <!-- Itens do menu ao lado da logo (desktop) -->
+  <nav class="menu-group" aria-label="Menu principal">
+    <a href="{{ '/servicos/' | relative_url }}" class="menu-item">Serviços</a>
+    <a href="{{ '/blog/' | relative_url }}" class="menu-item">Blog</a>
+    <a href="{{ '/#sobre' | relative_url }}" class="menu-item">Sobre</a>
+    <a href="{{ '/#contato' | relative_url }}" class="menu-item">Contato</a>
+  </nav>
+
+  <!-- Botão "Fale Conosco" à direita (desktop) -->
+  <a href="{{ '/#contato' | relative_url }}" class="btn-glass header-cta">
+    <i class="fas fa-rocket" style="margin-right:6px;"></i>Fale Conosco
+  </a>
+
+  <!-- Botão hambúrguer (aparece só no mobile) -->
+  <button class="menu-toggle" type="button"
+          aria-label="Abrir menu" aria-controls="mobile-menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+
+  <!-- Painel de navegação mobile (oculto por padrão; .open o exibe) -->
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Menu principal">
+    <a href="{{ '/servicos/' | relative_url }}" class="mobile-menu-link">Serviços</a>
+    <a href="{{ '/blog/' | relative_url }}" class="mobile-menu-link">Blog</a>
+    <a href="{{ '/#sobre' | relative_url }}" class="mobile-menu-link">Sobre</a>
+    <a href="{{ '/#contato' | relative_url }}" class="mobile-menu-link">Contato</a>
+    <a href="{{ '/#contato' | relative_url }}" class="btn-glass">
       <i class="fas fa-rocket" style="margin-right:6px;"></i>Fale Conosco
-    </button>
-  </div>
+    </a>
+  </nav>
 </header>

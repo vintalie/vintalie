@@ -1,0 +1,42 @@
+---
+layout: default
+---
+{% comment %}
+  Categoria de Serviços — lista artigos da coleção `servicos` filtrados por categoria.
+  Mesma lógica da categoria do blog, com cards e thumbnail.
+{% endcomment %}
+<div class="category-archive servicos-category">
+  <h1 class="section-title">Categoria: <span>{{ page.category_title | default: page.category | capitalize }}</span></h1>
+  <p class="section-sub">{{ page.category_description | default: "Artigos de serviço desta categoria." }}</p>
+
+  <div class="cards-grid">
+    {% assign posts = site.servicos | where: "categories", page.category %}
+    {% for post in posts %}
+      <article class="glass-card post-card">
+        {% if post.thumbnail %}
+        <a href="{{ post.url | relative_url }}" class="post-thumb">
+          <img src="{{ post.thumbnail | relative_url }}" alt="{{ post.title }}" loading="lazy" />
+        </a>
+        {% endif %}
+        <div class="post-card-body">
+          <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+          <p>{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
+          <div class="post-card-meta">
+            <span class="post-cat">
+              {% for category in post.categories %}
+                <a href="{{ '/servicos/categoria/' | append: category | relative_url }}">#{{ category }}</a>
+              {% endfor %}
+            </span>
+            <small>{{ post.date | date: "%d/%m/%Y" }}</small>
+          </div>
+        </div>
+      </article>
+    {% else %}
+      <p style="text-align:center; grid-column:1/-1;">Nenhum artigo encontrado nesta categoria.</p>
+    {% endfor %}
+  </div>
+
+  <p class="back-link">
+    <a href="{{ '/servicos/' | relative_url }}" class="btn-primary">← Voltar para serviços</a>
+  </p>
+</div>

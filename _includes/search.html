@@ -1,0 +1,38 @@
+<!--
+  Barra de pesquisa de postagens — fica ao lado dos artigos (sidebar).
+  • Campo de busca por texto
+  • Filtro por seção (Todos / Blog / Serviços)
+  • Filtro por categoria (dinâmico, a partir do índice search.json)
+  Os resultados são carregados de /search.json e renderizados via JS.
+-->
+<aside class="search-panel" id="search-panel" aria-label="Buscar postagens">
+  <form class="search-form" id="search-form" role="search">
+    <h3 class="search-title"><i class="fas fa-search"></i> Buscar</h3>
+
+    <div class="search-input-wrap">
+      <i class="fas fa-search search-icon"></i>
+      <input type="search" id="search-input" class="search-input"
+             placeholder="Buscar artigos..." autocomplete="off" aria-label="Buscar artigos" />
+    </div>
+
+    <label class="search-label" for="search-section">Seção</label>
+    <select id="search-section" class="search-select">
+      <option value="">Todas as seções</option>
+      <option value="blog">Blog</option>
+      <option value="servicos">Serviços</option>
+    </select>
+
+    <label class="search-label" for="search-category">Categoria</label>
+    <select id="search-category" class="search-select">
+      <option value="">Todas as categorias</option>
+    </select>
+
+    <button type="button" id="search-clear" class="search-clear">
+      <i class="fas fa-times"></i> Limpar filtros
+    </button>
+  </form>
+
+  <div class="search-results" id="search-results" aria-live="polite">
+    <p class="search-hint">Digite para buscar entre posts do blog e artigos de serviços.</p>
+  </div>
+</aside>
