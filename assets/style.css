@@ -173,11 +173,18 @@ a:hover {
   border-bottom: 1px solid var(--divider);
 }
 
-/* Logo horizontal (SVG com texto em curvas — não depende da fonte) */
+/* Logo (horizontal no desktop, quadrada no mobile via <picture>).
+   O SVG tem viewBox justo (sem espaço vazio), então 40px de altura
+   centralizam perfeitamente com os itens do menu. */
 .glass-header .logo {
   display: inline-flex;
   align-items: center;
   flex-shrink: 0;
+  line-height: 0;          /* elimina o descender do baseline inline */
+}
+.glass-header .logo picture {
+  display: flex;
+  align-items: center;
 }
 .glass-header .logo img {
   height: 40px;
@@ -1297,6 +1304,11 @@ a:hover {
     order: 1;
     margin-right: auto;
   }
+  /* No mobile a logo é a quadrada (V + wordmark empilhados): 44px de altura
+     acompanha a altura do botão hambúrguer e dá presença à marca. */
+  .glass-header .logo img {
+    height: 44px;
+  }
   .mobile-menu {
     order: 4;
     flex-basis: 100%;
@@ -1349,7 +1361,7 @@ a:hover {
 
 @media (max-width: 480px) {
   .glass-header .logo img {
-    height: 32px;
+    height: 40px;
   }
   .hero h1 {
     font-size: 1.9rem;

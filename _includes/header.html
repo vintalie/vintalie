@@ -8,9 +8,12 @@
 -->
 <header class="glass-header">
 
-  <!-- Logo à esquerda -->
+  <!-- Logo à esquerda. No desktop usa a horizontal; no mobile (<=900px) usa a quadrada. -->
   <a href="{{ '/' | relative_url }}" class="logo" aria-label="Vintalie — início">
-    <img src="{{ '/assets/img/logo-horizontal.svg' | relative_url }}" alt="Vintalie" />
+    <picture>
+      <source media="(max-width: 900px)" srcset="{{ '/assets/img/logo-quadrada-header.svg' | relative_url }}" />
+      <img src="{{ '/assets/img/logo-horizontal.svg' | relative_url }}" alt="Vintalie" />
+    </picture>
   </a>
 
   <!-- Itens do menu ao lado da logo (desktop) -->
