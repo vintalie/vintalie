@@ -1,17 +1,67 @@
+<!--
+  Formulário de leads com SEGMENTAÇÃO do cliente.
+  Além dos dados de contato, o formulário classifica o lead por:
+    • serviço de interesse (categorias da página Serviços)
+    • porte da empresa
+    • estágio (o que busca)
+  Isso permite ao time priorizar e personalizar o atendimento.
+  O formulário aponta para o endpoint de destino (ajuste o action conforme seu provedor).
+-->
 <section id="lead-form" class="form-section">
   <span id="contato" class="anchor-target" aria-hidden="true"></span>
+
   <h2>Vamos transformar <span>sua marca</span>?</h2>
-  <p>Preencha o formulário e nosso time entrará em contato para criar uma solução sob medida.</p>
+  <p>
+    Conte um pouco sobre você e seu negócio. Com essas informações, nosso time já chega
+    entendendo seu contexto e propõe a solução certa.
+  </p>
+
   <form class="form-group" action="https://formspree.io/f/seu-id" method="POST">
-    <input type="text" name="nome" placeholder="Seu nome completo" required />
-    <input type="email" name="email" placeholder="Seu melhor e-mail" required />
-    <input type="text" name="empresa" placeholder="Nome da sua empresa" />
+
+    <!-- Dados de contato -->
+    <input type="text" name="nome" placeholder="Seu nome completo" autocomplete="name" required />
+    <input type="email" name="email" placeholder="Seu melhor e-mail" autocomplete="email" required />
+    <input type="text" name="empresa" placeholder="Nome da sua empresa" autocomplete="organization" />
+
+    <!-- Segmentação: serviço de interesse -->
+    <label class="form-label" for="servico">Qual serviço você procura?</label>
+    <select id="servico" name="servico" class="form-select" required>
+      <option value="" disabled selected>Selecione o serviço</option>
+      {% for servico in site.data.servicos %}
+      <option value="{{ servico.titulo }}">{{ servico.titulo }}</option>
+      {% endfor %}
+      <option value="Ainda não sei">Ainda não sei — quero orientação</option>
+    </select>
+
+    <!-- Segmentação: porte da empresa -->
+    <label class="form-label" for="porte">Porte da empresa</label>
+    <select id="porte" name="porte" class="form-select">
+      <option value="" disabled selected>Selecione o porte</option>
+      <option value="MEI / Autônomo">MEI / Autônomo</option>
+      <option value="Pequena (1-20)">Pequena (1–20 pessoas)</option>
+      <option value="Média (21-100)">Média (21–100 pessoas)</option>
+      <option value="Grande (100+)">Grande (100+ pessoas)</option>
+    </select>
+
+    <!-- Segmentação: estágio / objetivo -->
+    <label class="form-label" for="estagio">Em que estágio você está?</label>
+    <select id="estagio" name="estagio" class="form-select">
+      <option value="" disabled selected>Selecione o estágio</option>
+      <option value="Começando do zero">Começando do zero</option>
+      <option value="Estruturando">Já tenho marca, quero estruturar</option>
+      <option value="Escalando">Quero escalar resultados</option>
+      <option value="Reformulando">Preciso reposicionar / reformular</option>
+    </select>
+
+    <!-- Contexto livre -->
     <textarea name="mensagem" placeholder="Conte-nos sobre seu desafio ou objetivo..." rows="4"></textarea>
+
     <button type="submit" class="btn-submit">
       <i class="fas fa-paper-plane" style="margin-right:10px;"></i>Quero evoluir minha marca
     </button>
   </form>
-  <p style="font-size:0.85rem; color:#8a8a8a; margin-top:1rem;">
+
+  <p class="form-note">
     Ao enviar, você concorda com nossa política de privacidade.
   </p>
 </section>

@@ -1,0 +1,36 @@
+---
+layout: default
+---
+{% comment %}
+  Artigo de serviço — capa no topo, título, categoria, data e conteúdo.
+  A capa (`page.cover`) é exibida em destaque no topo do artigo.
+{% endcomment %}
+<article class="post-full">
+  {% if page.cover %}
+  <figure class="post-cover">
+    <img src="{{ page.cover | relative_url }}" alt="{{ page.title }}" />
+  </figure>
+  {% endif %}
+
+  <header class="post-header">
+    <p class="post-meta">
+      <span class="post-section">Serviços</span>
+      {% if page.categories %}
+        • {{ page.categories | join: " · " }}
+      {% endif %}
+      • {{ page.date | date: "%d/%m/%Y" }}
+    </p>
+    <h1>{{ page.title }}</h1>
+    {% if page.excerpt %}
+    <p class="post-lead">{{ page.excerpt }}</p>
+    {% endif %}
+  </header>
+
+  <div class="post-content">
+    {{ content }}
+  </div>
+
+  <nav class="post-nav">
+    <a href="{{ '/servicos/' | relative_url }}" class="btn-glass">← Todos os serviços</a>
+  </nav>
+</article>

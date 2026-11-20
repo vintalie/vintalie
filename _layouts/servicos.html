@@ -1,0 +1,70 @@
+---
+layout: default
+---
+{% comment %}
+  Índice de Serviços — cards com thumbnail, filtro por categoria, paginação
+  e barra de pesquisa ao lado dos artigos (mesma lógica do blog).
+{% endcomment %}
+<div class="archive-layout">
+  <div class="archive-main">
+    <h1 class="section-title">Nossos <span>serviços</span></h1>
+    <p class="section-sub">Soluções de estratégia, branding, performance, tecnologia e dados para sua marca evoluir.</p>
+
+    <!-- Menu de categorias -->
+    <div class="category-menu">
+      <a href="{{ '/servicos/' | relative_url }}" class="btn-glass current">Todos</a>
+      {% for servico in site.data.servicos %}
+        <a href="{{ '/servicos/categoria/' | append: servico.slug | relative_url }}" class="btn-glass">{{ servico.titulo }}</a>
+      {% endfor %}
+    </div>
+
+    <!-- Cards de artigos (paginação) -->
+    <div class="cards-grid">
+      {% for post in paginator.posts %}
+        <article class="glass-card post-card">
+          {% if post.thumbnail %}
+          <a href="{{ post.url | relative_url }}" class="post-thumb">
+            <img src="{{ post.thumbnail | relative_url }}" alt="{{ post.title }}" loading="lazy" />
+          </a>
+          {% endif %}
+          <div class="post-card-body">
+            <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+            <p>{{ post.excerpt | strip_html | truncatewords: 20 }}</p>
+            <div class="post-card-meta">
+              <span class="post-cat">
+                {% for category in post.categories %}
+                  <a href="{{ '/servicos/categoria/' | append: category | relative_url }}">#{{ category }}</a>
+                {% endfor %}
+              </span>
+              <small>{{ post.date | date: "%d/%m/%Y" }}</small>
+            </div>
+          </div>
+        </article>
+      {% endfor %}
+    </div>
+
+    <!-- Paginação -->
+    {% if paginator.total_pages > 1 %}
+    <div class="pagination">
+      {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path }}" class="btn-glass">&laquo; Anterior</a>
+      {% endif %}
+      {% for p in (1..paginator.total_pages) %}
+        {% if p == paginator.page %}
+          <span class="btn-glass current">{{ p }}</span>
+        {% else %}
+          <a href="{{ paginator.paginate_path | replace: ':num', p }}" class="btn-glass">{{ p }}</a>
+        {% endif %}
+      {% endfor %}
+      {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path }}" class="btn-glass">Próximo &raquo;</a>
+      {% endif %}
+    </div>
+    {% endif %}
+  </div>
+
+  <!-- Coluna lateral: barra de pesquisa -->
+  <div class="archive-side">
+    {% include search.html %}
+  </div>
+</div>

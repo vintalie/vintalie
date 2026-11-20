@@ -1,0 +1,16 @@
+---
+layout: servicos
+title: Serviços
+pagination:
+  enabled: true
+  collection: servicos
+  per_page: 5
+  permalink: '/page/:num/'
+  title_suffix: ' - página :num'
+---
+
+{% comment %}
+  Índice de Serviços — mesma lógica do blog.
+  Lista os artigos da coleção `servicos` com paginação, filtro por categoria
+  (via /servicos/categoria/:slug/) e cards com thumbnail.
+{% endcomment %}

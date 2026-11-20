@@ -1,10 +1,35 @@
 ---
 layout: default
 ---
+{% comment %}
+  Artigo de blog — capa no topo, título, categoria, data e conteúdo.
+{% endcomment %}
 <article class="post-full">
-  <h1>{{ page.title }}</h1>
-  <p class="post-meta">{{ page.date | date: "%d/%m/%Y" }} • {{ page.categories | join: ", " }}</p>
+  {% if page.cover %}
+  <figure class="post-cover">
+    <img src="{{ page.cover | relative_url }}" alt="{{ page.title }}" />
+  </figure>
+  {% endif %}
+
+  <header class="post-header">
+    <p class="post-meta">
+      <span class="post-section">Blog</span>
+      {% if page.categories %}
+        • {{ page.categories | join: " · " }}
+      {% endif %}
+      • {{ page.date | date: "%d/%m/%Y" }}
+    </p>
+    <h1>{{ page.title }}</h1>
+    {% if page.excerpt %}
+    <p class="post-lead">{{ page.excerpt }}</p>
+    {% endif %}
+  </header>
+
   <div class="post-content">
     {{ content }}
   </div>
+
+  <nav class="post-nav">
+    <a href="{{ '/blog/' | relative_url }}" class="btn-glass">← Todos os posts</a>
+  </nav>
 </article>

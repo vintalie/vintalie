@@ -1,0 +1,19 @@
+---
+layout: null
+permalink: /search.json
+---
+[
+{% assign all = site.posts | concat: site.servicos %}
+{% for item in all %}
+  {
+    "title": {{ item.title | jsonify }},
+    "url": {{ item.url | relative_url | jsonify }},
+    "section": "{% if item.collection == 'posts' %}blog{% else %}servicos{% endif %}",
+    "section_label": "{% if item.collection == 'posts' %}Blog{% else %}Serviços{% endif %}",
+    "categories": {{ item.categories | jsonify }},
+    "excerpt": {{ item.excerpt | strip_html | jsonify }},
+    "date": "{{ item.date | date: '%Y-%m-%d' }}",
+    "date_label": "{{ item.date | date: '%d/%m/%Y' }}"
+  }{% unless forloop.last %},{% endunless %}
+{% endfor %}
+]
