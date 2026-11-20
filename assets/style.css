@@ -35,16 +35,34 @@
    ========================================================================== */
 @font-face {
   font-family: 'URW Gothic';
-  src: url('fonts/URWGothic-Book.otf') format('opentype');
+  src: url('fonts/URWGothic-Book.otf') format('opentype'),
+       url('fonts/URWGothic-Book.ttf') format('truetype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'URW Gothic';
-  src: url('fonts/URWGothic-Demi.otf') format('opentype');
+  src: url('fonts/URWGothic-BookOblique.otf') format('opentype'),
+       url('fonts/URWGothic-BookOblique.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'URW Gothic';
+  src: url('fonts/URWGothic-Demi.otf') format('opentype'),
+       url('fonts/URWGothic-Demi.ttf') format('truetype');
   font-weight: 600 700;
   font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'URW Gothic';
+  src: url('fonts/URWGothic-DemiOblique.otf') format('opentype'),
+       url('fonts/URWGothic-DemiOblique.ttf') format('truetype');
+  font-weight: 600 700;
+  font-style: italic;
   font-display: swap;
 }
 
@@ -207,6 +225,69 @@ a:hover {
   color: #fff;
 }
 
+/* ---- Botão hambúrguer (só aparece no mobile; ver media queries) ---- */
+.menu-toggle {
+  display: none;               /* oculto no desktop */
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  width: 44px;
+  height: 44px;
+  padding: 0 10px;
+  background: transparent;
+  border: 1px solid var(--divider);
+  border-radius: 10px;
+  cursor: pointer;
+}
+.menu-toggle span {
+  display: block;
+  height: 2px;
+  width: 100%;
+  background: var(--text);
+  border-radius: 2px;
+  transition: transform .25s ease, opacity .2s ease;
+}
+/* Estado aberto: transforma as 3 barras em um "X" */
+.menu-toggle[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+.menu-toggle[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+.menu-toggle[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+/* ---- Painel de navegação mobile ---- */
+.mobile-menu {
+  display: none;               /* oculto por padrão; .open exibe no mobile */
+  flex-direction: column;
+  gap: 0;
+  width: 100%;
+  padding: .5rem 0 1rem;
+  border-top: 1px solid var(--divider);
+}
+.mobile-menu.open {
+  display: flex;
+}
+.mobile-menu-link {
+  padding: .9rem 1.5rem;
+  color: var(--text);
+  text-decoration: none;
+  font-size: 1.02rem;
+  border-bottom: 1px solid var(--border-soft);
+  transition: color .2s ease, background .2s ease;
+}
+.mobile-menu-link:hover {
+  color: var(--magenta-pink);
+  background: var(--surface-alt);
+}
+.mobile-menu .btn-glass {
+  margin: 1rem 1.5rem .5rem;
+  justify-content: center;
+  width: calc(100% - 3rem);
+}
+
 /* ==========================================================================
    5. HERO
    Headline "Ideias que movem marcas." com destaque em gradiente.
@@ -225,12 +306,17 @@ a:hover {
   line-height: 1.1;
   color: var(--text);
 }
-.hero h1 .text-gradient,
-.hero h1 span {
+.hero h1 .text-gradient {
   background: var(--gradient-logo);
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+/* "Ideias que movem marcas." — texto sólido (sem gradiente) */
+.hero h1 span {
+  color: var(--text);
+  -webkit-text-fill-color: currentColor;
+  background: none;
 }
 .hero p {
   max-width: 620px;
@@ -756,20 +842,40 @@ a:hover {
 .mt-2 { margin-top: 2rem; }
 .mt-4 { margin-top: 4rem; }
 
+/* Alvo de âncora invisível (para links #contato etc. sem criar seção visível) */
+.anchor-target {
+  display: block;
+  position: relative;
+  top: -80px;              /* compensa o header sticky ao navegar por âncora */
+  visibility: hidden;
+  height: 0;
+}
+
 /* ==========================================================================
    14. RESPONSIVO
    ========================================================================== */
 @media (max-width: 900px) {
   .glass-header {
     flex-wrap: wrap;
-    justify-content: center;
-    gap: .8rem;
+    justify-content: space-between;
+    gap: .5rem;
     padding: .8rem 1.2rem;
   }
+  /* Esconde os menus de desktop e exibe o botão hambúrguer */
   .menu-group {
-    gap: 1rem;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: none;
+  }
+  .menu-toggle {
+    display: flex;
+    order: 3;
+  }
+  .glass-header .logo {
+    order: 1;
+    margin-right: auto;
+  }
+  .mobile-menu {
+    order: 4;
+    flex-basis: 100%;
   }
 }
 
@@ -808,16 +914,6 @@ a:hover {
 @media (max-width: 480px) {
   .glass-header .logo img {
     height: 32px;
-  }
-  .menu-group {
-    gap: .8rem;
-  }
-  .menu-item {
-    font-size: .9rem;
-  }
-  .btn-glass {
-    padding: .55rem 1.2rem;
-    font-size: .9rem;
   }
   .hero h1 {
     font-size: 1.9rem;

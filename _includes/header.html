@@ -2,10 +2,15 @@
   Header — fundo branco, logo horizontal (SVG) à esquerda, menu à direita.
   A logo fica SEMPRE sobre fundo branco (o "V" tem transparência e é
   majoritariamente gradiente sem borda), por isso o header é branco.
+
+  Responsivo:
+   • Desktop (>900px): menu completo em duas colunas, logo ao centro.
+   • Mobile (<=900px): a logo fica à esquerda e um botão "hambúrguer"
+     abre um painel de navegação (nav.mobile-menu) abaixo do header.
 -->
 <header class="glass-header">
-  <!-- Menu esquerdo -->
-  <div class="menu-group">
+  <!-- Menu esquerdo (desktop) -->
+  <div class="menu-group menu-left">
     <a href="#servicos" class="menu-item">Serviços</a>
     <a href="/blog/" class="menu-item">Blog</a>
   </div>
@@ -15,12 +20,29 @@
     <img src="{{ '/assets/img/logo-horizontal.svg' | relative_url }}" alt="Vintalie" />
   </a>
 
-  <!-- Menu direito + CTA -->
-  <div class="menu-group">
+  <!-- Menu direito + CTA (desktop) -->
+  <div class="menu-group menu-right">
     <a href="#sobre" class="menu-item">Sobre</a>
     <a href="#contato" class="menu-item">Contato</a>
     <button class="btn-glass" onclick="document.getElementById('lead-form').scrollIntoView({behavior:'smooth'})">
       <i class="fas fa-rocket" style="margin-right:6px;"></i>Fale Conosco
     </button>
   </div>
+
+  <!-- Botão hambúrguer (aparece só no mobile) -->
+  <button class="menu-toggle" type="button"
+          aria-label="Abrir menu" aria-controls="mobile-menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+
+  <!-- Painel de navegação mobile (oculto por padrão; .open o exibe) -->
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Menu principal">
+    <a href="#servicos" class="mobile-menu-link">Serviços</a>
+    <a href="/blog/" class="mobile-menu-link">Blog</a>
+    <a href="#sobre" class="mobile-menu-link">Sobre</a>
+    <a href="#contato" class="mobile-menu-link">Contato</a>
+    <button class="btn-glass" onclick="document.getElementById('lead-form').scrollIntoView({behavior:'smooth'})">
+      <i class="fas fa-rocket" style="margin-right:6px;"></i>Fale Conosco
+    </button>
+  </nav>
 </header>
