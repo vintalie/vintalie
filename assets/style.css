@@ -164,7 +164,7 @@ a:hover {
   z-index: 100;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: end;
   gap: 1.5rem;
   padding: 1rem 2rem;
   max-width: var(--maxw);
@@ -863,7 +863,7 @@ a:hover {
    ========================================================== */
 .glass-header {
   display: flex;
-  align-items: center;
+  align-items: end;
   gap: 1.5rem;
 }
 .glass-header .menu-group {
