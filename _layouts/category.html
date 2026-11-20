@@ -32,7 +32,7 @@ layout: default
     {% endif %}
     {% for page_num in (1..paginator.total_pages) %}
       {% if page_num == paginator.page %}
-        <span class="btn-glass" style="background:rgba(169,139,255,0.2); border-color:#A98BFF;">{{ page_num }}</span>
+        <span class="btn-glass current" style="background:var(--gradient-brand); border-color:transparent; color:#fff;">{{ page_num }}</span>
       {% else %}
         <a href="{{ paginator.paginate_path | replace: ':num', page_num }}" class="btn-glass">{{ page_num }}</a>
       {% endif %}

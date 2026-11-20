@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 124.616 124.616" role="img" aria-label="Vintalie">
+  <defs>
+    <linearGradient id="vg" x1="0" y1="62.308" x2="123.132" y2="62.308" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6a009c"/><stop offset="1" stop-color="#d4145a"/>
+    </linearGradient>
+  </defs>
+  <path d="M0 0 L61.676 124.616 L123.132 0 L86.987 0 L61.676 50.64 L36.364 0 Z" fill="url(#vg)"/>
+</svg>

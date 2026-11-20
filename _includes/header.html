@@ -1,9 +1,21 @@
+<!--
+  Header — fundo branco, logo horizontal (SVG) à esquerda, menu à direita.
+  A logo fica SEMPRE sobre fundo branco (o "V" tem transparência e é
+  majoritariamente gradiente sem borda), por isso o header é branco.
+-->
 <header class="glass-header">
+  <!-- Menu esquerdo -->
   <div class="menu-group">
     <a href="#servicos" class="menu-item">Serviços</a>
     <a href="/blog/" class="menu-item">Blog</a>
   </div>
-  <div class="logo">V<span>intalie</span></div>
+
+  <!-- Logo horizontal completa (V + wordmark "intalie") em SVG com texto em curvas -->
+  <a href="{{ '/' | relative_url }}" class="logo" aria-label="Vintalie — início">
+    <img src="{{ '/assets/img/logo-horizontal.svg' | relative_url }}" alt="Vintalie" />
+  </a>
+
+  <!-- Menu direito + CTA -->
   <div class="menu-group">
     <a href="#sobre" class="menu-item">Sobre</a>
     <a href="#contato" class="menu-item">Contato</a>
