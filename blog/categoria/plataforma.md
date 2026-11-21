@@ -1,6 +1,7 @@
 ---
 layout: category
 title: plataforma
+image: "/assets/img/posts/plataforma-thirteen-objetivos-solucoes-cover.png"
 category: plataforma
 category_description: "A plataforma Thirteen e soluções de produto"
 pagination:

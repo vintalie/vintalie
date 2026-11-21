@@ -1,0 +1,12 @@
+# robots.txt — Vintalie (vintalie.com.br)
+# Permite indexação total e aponta o sitemap do Google.
+
+User-agent: *
+Allow: /
+
+# Bloqueia arquivos internos que não devem ser indexados
+Disallow: /admin/
+Disallow: /_site/
+Disallow: /node_modules/
+
+Sitemap: https://vintalie.com.br/sitemap.xml

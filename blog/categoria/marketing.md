@@ -1,6 +1,7 @@
 ---
 layout: category
 title: marketing
+image: "/assets/img/posts/novo-projeto-marketing-digital-cover.png"
 category: marketing
 category_description: "Artigos sobre marketing"
 pagination:

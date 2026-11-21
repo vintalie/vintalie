@@ -1,6 +1,7 @@
 ---
 layout: category
 title: tecnologia
+image: "/assets/img/posts/plataforma-thirteen-objetivos-solucoes-cover.png"
 category: tecnologia
 category_description: "Ferramentas, automação e desenvolvimento"
 pagination:

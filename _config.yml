@@ -1,5 +1,6 @@
 title: Vintalie – Soluções Digitais
 description: Ideias que movem marcas.
+author: Vintalie
 baseurl: ""
 url: "https://vintalie.com.br"
 
@@ -58,3 +59,12 @@ pagination:
 
 plugins:
   - jekyll-paginate-v2
+  - jekyll-sitemap
+
+# Arquivos/pastas que NÃO vão para o build (artefatos internos, docs de apoio)
+exclude:
+  - briefing-orquestracao.md
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - Containerfile

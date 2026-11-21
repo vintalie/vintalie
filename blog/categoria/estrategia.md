@@ -1,6 +1,7 @@
 ---
 layout: category
 title: estratégia
+image: "/assets/img/posts/novo-projeto-marketing-digital-cover.png"
 category: estratégia
 category_description: "Artigos sobre estratégia"
 pagination:
