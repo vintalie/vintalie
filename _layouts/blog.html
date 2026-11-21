@@ -20,9 +20,18 @@ layout: default
       {% endfor %}
     </div>
 
-    <!-- Cards de posts (paginação) -->
+    <!-- Cards de posts (paginação).
+         Usa `paginator.posts` quando o plugin jekyll-paginate-v2 está ativo
+         (build local); em produção (GitHub Pages, sem o plugin) cai para
+         `site.posts`, garantindo que os posts apareçam. -->
+    {% if paginator %}
+      {% assign posts = paginator.posts %}
+    {% else %}
+      {% assign posts = site.posts %}
+    {% endif %}
+
     <div class="cards-grid">
-      {% for post in paginator.posts %}
+      {% for post in posts %}
         <article class="glass-card post-card">
           {% if post.thumbnail %}
           <a href="{{ post.url | relative_url }}" class="post-thumb">
@@ -46,7 +55,7 @@ layout: default
     </div>
 
     <!-- Paginação -->
-    {% if paginator.total_pages > 1 %}
+    {% if paginator and paginator.total_pages > 1 %}
     <div class="pagination">
       {% if paginator.previous_page %}
         <a href="{{ paginator.previous_page_path }}" class="btn-glass">&laquo; Anterior</a>
