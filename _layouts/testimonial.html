@@ -1,0 +1,18 @@
+---
+layout: default
+---
+{% comment %}
+  Depoimento individual — usado pelos arquivos da coleção `testimonials`.
+  Exibe o autor, cargo/empresa e a citação.
+{% endcomment %}
+<div class="testimonial-full">
+  <h1>Depoimento de <span>{{ page.author | default: page.empresa }}</span></h1>
+  <p class="section-sub">
+    {% if page.cargo %}{{ page.cargo }}{% endif %}
+    {% if page.empresa %} — {{ page.empresa }}{% endif %}
+  </p>
+  <blockquote>{{ content }}</blockquote>
+  <p style="margin-top:1.5rem;">
+    <a href="{{ '/' | relative_url }}#sobre" class="btn-primary" style="display:inline-block;">← Ver todos os depoimentos</a>
+  </p>
+</div>

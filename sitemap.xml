@@ -1,0 +1,116 @@
+---
+layout: null
+permalink: /sitemap.xml
+sitemap: false
+---
+{% comment %}
+  Sitemap do Google — enumera TODAS as URLs indexáveis do site.
+  Criado manualmente porque o jekyll-paginate-v2 remove as páginas paginadas
+  (blog index, índices e categorias com paginação) de `site.pages`, e o
+  jekyll-sitemap não as enxerga. Assim o Google recebe a lista completa.
+
+  Conteúdo:
+    • Home
+    • Índices paginados: /blog/ e /servicos/ (+ /page/N/ quando existir)
+    • Todos os posts do blog
+    • Todos os artigos de serviço
+    • Categorias do blog e de serviços
+    • Depoimentos (coleção testimonials)
+  A página 404 (noindex) é omitida de propósito.
+{% endcomment %}<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  {%- comment -%} Home {%- endcomment -%}
+  <url>
+    <loc>{{ site.url }}/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+
+  {%- comment -%} Índices paginados {%- endcomment -%}
+  {%- assign blog_count = site.posts | size -%}
+  {%- assign serv_count = site.servicos | size -%}
+  {%- assign blog_pages = blog_count | plus: 4 | divided_by: 5 -%}
+  {%- assign serv_pages = serv_count | plus: 4 | divided_by: 5 -%}
+  <url>
+    <loc>{{ site.url }}/blog/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  {%- for i in (2..blog_pages) -%}
+  <url>
+    <loc>{{ site.url }}/blog/page/{{ i }}/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  {%- endfor -%}
+  <url>
+    <loc>{{ site.url }}/servicos/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  {%- for i in (2..serv_pages) -%}
+  <url>
+    <loc>{{ site.url }}/servicos/page/{{ i }}/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  {%- endfor -%}
+
+  {%- comment -%} Posts do blog {%- endcomment -%}
+  {%- for post in site.posts -%}
+  <url>
+    <loc>{{ site.url }}{{ post.url }}</loc>
+    {%- if post.last_modified_at -%}
+    <lastmod>{{ post.last_modified_at | date_to_xmlschema }}</lastmod>
+    {%- elsif post.date -%}
+    <lastmod>{{ post.date | date_to_xmlschema }}</lastmod>
+    {%- endif -%}
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  {%- endfor -%}
+
+  {%- comment -%} Artigos de serviço {%- endcomment -%}
+  {%- for servico in site.servicos -%}
+  <url>
+    <loc>{{ site.url }}{{ servico.url }}</loc>
+    {%- if servico.last_modified_at -%}
+    <lastmod>{{ servico.last_modified_at | date_to_xmlschema }}</lastmod>
+    {%- elsif servico.date -%}
+    <lastmod>{{ servico.date | date_to_xmlschema }}</lastmod>
+    {%- endif -%}
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  {%- endfor -%}
+
+  {%- comment -%} Categorias do blog {%- endcomment -%}
+  {%- assign blog_cats = site.posts | map: 'categories' | join: ',' | split: ',' | uniq | sort -%}
+  {%- for cat in blog_cats -%}
+    {%- if cat != '' -%}
+  <url>
+    <loc>{{ site.url }}/blog/categoria/{{ cat | slugify: "latin" }}/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+    {%- endif -%}
+  {%- endfor -%}
+
+  {%- comment -%} Categorias de serviço {%- endcomment -%}
+  {%- for servico in site.data.servicos -%}
+  <url>
+    <loc>{{ site.url }}/servicos/categoria/{{ servico.slug }}/</loc>
+    <changefreq>weekly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  {%- endfor -%}
+
+  {%- comment -%} Depoimentos {%- endcomment -%}
+  {%- for dep in site.testimonials -%}
+  <url>
+    <loc>{{ site.url }}{{ dep.url }}</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.4</priority>
+  </url>
+  {%- endfor -%}
+</urlset>

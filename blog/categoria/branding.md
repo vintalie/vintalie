@@ -1,6 +1,7 @@
 ---
 layout: category
 title: branding
+image: "/assets/img/posts/branding-era-digital-cover.png"
 category: branding
 category_description: "Identidade, percepção e construção de marca"
 pagination:

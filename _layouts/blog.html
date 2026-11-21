@@ -14,7 +14,7 @@ layout: default
       {% assign categories = site.posts | map: "categories" | join: "," | split: "," | uniq | sort %}
       {% for cat in categories %}
         {% if cat != "" %}
-          {% assign slug = cat | slugify %}
+          {% assign slug = cat | slugify: "latin" %}
           <a href="{{ '/blog/categoria/' | append: slug | relative_url }}" class="btn-glass">{{ cat | capitalize }}</a>
         {% endif %}
       {% endfor %}
@@ -44,7 +44,7 @@ layout: default
             <div class="post-card-meta">
               <span class="post-cat">
                 {% for category in post.categories %}
-                  <a href="{{ '/blog/categoria/' | append: category | slugify | relative_url }}">#{{ category }}</a>{% unless forloop.last %}, {% endunless %}
+                  <a href="{{ '/blog/categoria/' | append: category | slugify: "latin" | relative_url }}">#{{ category }}</a>{% unless forloop.last %}, {% endunless %}
                 {% endfor %}
               </span>
               <small>{{ post.date | date: "%d/%m/%Y" }}</small>
