@@ -3,7 +3,7 @@
 # Cada item vira uma categoria com página própria (/servicos/categoria/:slug/),
 # seguindo a mesma lógica do blog. O `slug` casa com a categoria dos artigos.
 # ============================================================================
-- slug: "estratégia-digital"
+- slug: "estrategia-digital"
   titulo: "Estratégia Digital"
   icone: "fa-bullseye"
   descricao: "Planejamento de marketing, posicionamento e análise de mercado para direcionar suas ações."
