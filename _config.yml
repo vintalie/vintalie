@@ -4,6 +4,9 @@ author: Vintalie
 baseurl: ""
 url: "https://vintalie.com.br"
 
+# Google Tag Manager / Google Analytics 4 (ID do contêiner). Deixe vazio para desativar.
+gtm_id: "G-J367W8C80H"
+
 # ============================================================================
 # Coleções
 #   • testimonials : depoimentos de clientes

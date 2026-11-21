@@ -1,0 +1,24 @@
+<!--
+  Google Tag Manager / Google Analytics 4 — Vintalie
+
+  Uso (em _layouts/default.html):
+    - Dentro do HEAD: incluir o arquivo gtm_head.html
+    - Logo apos a abertura de BODY: incluir o arquivo gtm_body.html
+
+  O bloco do HEAD carrega o gtm.js de forma assincrona e inicializa o
+  dataLayer. O bloco do BODY adiciona o NOSCRIPT (fallback quando o
+  JavaScript esta desativado), conforme exigido pelo Google.
+
+  ATENCAO: nao escreva tags Liquid de include dentro deste comentario.
+  O Liquid as processa mesmo dentro de comentarios HTML.
+-->
+{%- if site.gtm_id -%}
+<!-- Google Tag Manager (head) -->
+<script async src="https://www.googletagmanager.com/gtm.js?id={{ site.gtm_id }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+</script>
+<!-- End Google Tag Manager -->
+{%- endif -%}
