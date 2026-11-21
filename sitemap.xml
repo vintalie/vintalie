@@ -27,34 +27,18 @@ sitemap: false
   </url>
 
   {%- comment -%} Índices paginados {%- endcomment -%}
-  {%- assign blog_count = site.posts | size -%}
-  {%- assign serv_count = site.servicos | size -%}
-  {%- assign blog_pages = blog_count | plus: 4 | divided_by: 5 -%}
-  {%- assign serv_pages = serv_count | plus: 4 | divided_by: 5 -%}
+  {%- comment -%} As páginas /page/N/ só existem no build local (jekyll-paginate-v2).
+     No GitHub Pages elas retornam 404, então NÃO entram no sitemap. {%- endcomment -%}
   <url>
     <loc>{{ site.url }}/blog/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-  {%- for i in (2..blog_pages) -%}
-  <url>
-    <loc>{{ site.url }}/blog/page/{{ i }}/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  {%- endfor -%}
   <url>
     <loc>{{ site.url }}/servicos/</loc>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
-  {%- for i in (2..serv_pages) -%}
-  <url>
-    <loc>{{ site.url }}/servicos/page/{{ i }}/</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  {%- endfor -%}
 
   {%- comment -%} Posts do blog {%- endcomment -%}
   {%- for post in site.posts -%}
