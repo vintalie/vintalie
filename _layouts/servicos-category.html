@@ -24,7 +24,7 @@ layout: default
           <div class="post-card-meta">
             <span class="post-cat">
               {% for category in post.categories %}
-                <a href="{{ '/servicos/categoria/' | append: category | relative_url }}">#{{ category }}</a>
+                <a href="{{ '/servicos/categoria/' | append: category | slugify: 'latin' | relative_url }}">#{{ category }}</a>
               {% endfor %}
             </span>
             <small>{{ post.date | date: "%d/%m/%Y" }}</small>

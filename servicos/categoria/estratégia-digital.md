@@ -1,6 +1,7 @@
 ---
 layout: servicos-category
 title: Estratégia Digital
+permalink: /servicos/categoria/estrategia-digital/
 image: "/assets/img/posts/estrategia-digital-diagnostico-plano-cover.png"
 category: estratégia-digital
 category_title: "Estratégia Digital"
